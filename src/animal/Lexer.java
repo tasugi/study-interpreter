@@ -104,35 +104,5 @@ public class Lexer {
         return sb.toString();
     }
 
-    protected static class NumToken extends Token {
-        private int value;
 
-        protected NumToken(int line, int v) {
-            super(line);
-            value = v;
-        }
-        public boolean isNumber() { return true; }
-        public int getNumber() { return value; }
-        public String getText() { return Integer.toString(value); }
-    }
-    protected static class IdToken extends Token {
-        private String text;
-
-        protected IdToken(int line, String id) {
-            super(line);
-            text = id;
-        }
-        public boolean isIdentifier() { return true; }
-        public String getText() { return text; }
-    }
-    protected static class StrToken extends Token {
-        private String literal;
-
-        protected StrToken(int line, String str) {
-            super(line);
-            literal = str;
-        }
-        public boolean isString() { return true; }
-        public String getText() { return literal; }
-    }
 }

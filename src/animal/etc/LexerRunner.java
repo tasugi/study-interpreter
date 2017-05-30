@@ -1,4 +1,4 @@
-package etc;
+package animal.etc;
 
 import animal.*;
 
